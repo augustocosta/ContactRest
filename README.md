@@ -22,7 +22,7 @@ Response:
 ```
 
 # Get Contact by Id
-GET - http://localhost/ContactRest/api/Contact/contacts?id=1
+GET - http://localhost/ContactRest/api/Contact/contacts?id=1  
 Response:
 ```json
 {
@@ -33,14 +33,26 @@ Response:
 ```
 
 # Add Contact
-POST - http://localhost/ContactRest/api/Contact/contacts
-Body - ```json {"firstName":"Jane", "lastName" : "Doe"} ```
+POST - http://localhost/ContactRest/api/Contact/contacts  
+Body:  
+```json 
+{
+	"firstName":"Jane", 
+	"lastName" : "Doe"
+} 
+```
 Response: 1 (integer)
 
 
 # Edit Contact
-PUT - http://localhost/ContactRest/api/Contact/contacts
-Body - ```json {"id" : 1, "firstName":"Jane", "lastName" : "Doe"} ```
+PUT - http://localhost/ContactRest/api/Contact/contacts  
+Body:
+```json 
+{
+	"id" : 1, "firstName":"Jane", 
+	"lastName" : "Doe"
+} 
+```
 Response:
 ```json
 {
@@ -51,5 +63,5 @@ Response:
 ```
 
 # Delete Contact
-DELETE - http://localhost/ContactRest/api/Contact/contacts?id=1
+DELETE - http://localhost/ContactRest/api/Contact/contacts?id=1  
 Response: true OR false (bool)
