@@ -1,5 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Web.Http;
+using ContactRest.Exceptions;
+using ContactRest.Exceptions.Handler;
 
 namespace ContactRest
 {
@@ -9,6 +11,8 @@ namespace ContactRest
         {
             // Web API configuration and services
             config.EnableCors();
+
+            config.Filters.Add(new WebApiExceptionHandling());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
